@@ -25,7 +25,7 @@ export default function ChatView() {
         onInput={(e: any) => setInput(e.target.value)}
         placeholder="Whats on your mind?"
       ></vscode-text-area>
-      <button onclick={send}>Send</button>
+      <vscode-button onclick={send}>Send</vscode-button>
     </>
   );
 }

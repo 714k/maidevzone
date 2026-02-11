@@ -33,6 +33,12 @@ vscode-text-area {
   padding: 10px;
 }
 
+vscode-button {
+  /* background: var(--background); */
+  /* border: solid 1px grey; */
+  border-radius: 25px;
+}
+
 textarea {
   width: 100%;
   min-height: 100px;
