@@ -73,7 +73,7 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
-    "compile": "npm run compile:extension && npm run compile:webview",
+    "compile": "npm run clean && npm run compile:extension && npm run compile:webview",
     "compile:extension": "npm run check-types && node esbuild.js",
     "compile:webview": "cd webview-ui && npm run build",
     "watch": "concurrently \"npm run watch:extension\" \"npm run watch:webview\"",
@@ -84,7 +84,10 @@
     "check-types": "tsc --noEmit",
     "lint": "eslint src --ext ts",
     "test": "vscode-test",
-    "dev": "cd webview-ui && npm run dev"
+    "dev": "cd webview-ui && npm run dev",
+    "clean": "rimraf dist/",
+    "format:fix": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
@@ -97,6 +100,7 @@
     "concurrently": "^8.2.2",
     "esbuild": "^0.19.11",
     "eslint": "^8.56.0",
+    "prettier": "3.8.1",
     "typescript": "^5.3.3"
   }
 }

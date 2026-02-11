@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
-import { getNonce } from './getNonce';
+import { getNonce } from './utils/getNonce';
 
 class MainViewProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = 'maidevzone.mainView';
